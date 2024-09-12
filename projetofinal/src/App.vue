@@ -1,26 +1,23 @@
 <template>
   <header>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="logo">
-            <a href="#">
-              <img src="./img/logo.png" alt="">
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="navbar">
-            <nav>
-              <a href="#">Home</a>
-              <a href="#">Sobre</a>
-              <a href="#">Contato</a>
-            </nav>
-          </div>
-        </div>
+      <div class="logo">
+        <a href="#">
+          <img src="./img/logo.png" alt="">
+        </a>
+      </div>
+      <div class="navbar">
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
   </header>
+  <!-- Conteúdo -->
   <section class="login" id="login">
     <div class="container">
       <div class="login-box">
@@ -38,47 +35,8 @@
   <footer>
     <p>All Rights Reserved</p>
   </footer>
-  <!-- <div class="content">
-
-  </div>
-  <div class="login-container">
-    <div class="login-form">
-      <img src="./img/user.png" alt="">
-      <h2>Login</h2>
-      <form @submit.prevent="handleSubmit">
-        <div class="form-group">
-          <input placeholder="Insira seu e-mail" type="email" id="email" v-model="email" required>
-          <input placeholder="Digite sua senha" type="password" id="password" v-model="password" required>
-          <span class="show-password" @click="showPassword = !showPassword">
-            {{ showPassword ? 'Ocultar' : 'Mostrar' }}
-          </span>
-          <button type="submit">Entrar</button>
-          <a href="#">Esqueci minha senha</a>
-          <p>Não tem cadastro? <a href="#">Cadastre-se</a></p>
-        </div>
-      </form>
-    </div>
-  </div> -->
 </template>
 
-<!-- <script>
-export default {
-  data() {
-    return {
-      email: '',
-      password: '',
-      showPassword: false
-    }
-  },
-  methods: {
-    handleSubmit() {
-      // Lógica para enviar os dados do formulário para o backend
-      console.log('Email:', this.email)
-      console.log('Senha:', this.password)
-    }
-  }
-}
-</script> -->
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
@@ -119,11 +77,16 @@ header .navbar a {
   text-decoration: none;
 }
 
+header .container {
+  display: flex;
+  flex-direction: row;
+}
+
 #login .container {
   background-color: var(--bg-secondary-color);
   display: flex;
   justify-content: center;
-  height: 80vh;
+  height: 550px;
   padding: 25px;
 }
 
@@ -159,6 +122,7 @@ section .login-box input {
   height: 40px;
   background-color: var(--bg-secondary-color);
   border: solid 2px var(--border-color);
+  box-shadow: rgba(0, 0, 0, 0.2) 3px 3px;
   border-radius: 8px;
   padding-left: 10px;
 }
@@ -167,7 +131,6 @@ section .login-box a {
   display: flex;
   align-items: start;
   text-decoration: none;
-  float: right;
 }
 
 section .login-box button {
@@ -176,18 +139,58 @@ section .login-box button {
   background-color: var(--primary-color);
   border: solid 2px var(--border-color);
   border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.2) 3px 3px;
   color: var(--text-light-color);
 }
 
 footer {
   width: 100%;
-  height: 180px;
+  height: 100vh;
   background-color: var(--primary-color);
-
+  bottom: 0;
 }
-
-/* Outros estilos para os elementos da página */
 </style>
+<!-- <div class="content">
+    
+  </div>
+  <div class="login-container">
+    <div class="login-form">
+      <img src="./img/user.png" alt="">
+      <h2>Login</h2>
+      <form @submit.prevent="handleSubmit">
+        <div class="form-group">
+          <input placeholder="Insira seu e-mail" type="email" id="email" v-model="email" required>
+          <input placeholder="Digite sua senha" type="password" id="password" v-model="password" required>
+          <span class="show-password" @click="showPassword = !showPassword">
+            {{ showPassword ? 'Ocultar' : 'Mostrar' }}
+          </span>
+          <button type="submit">Entrar</button>
+          <a href="#">Esqueci minha senha</a>
+          <p>Não tem cadastro? <a href="#">Cadastre-se</a></p>
+        </div>
+      </form>
+    </div>
+  </div> -->
+
+<!-- <script>
+export default {
+  data() {
+    return {
+      email: '',
+      password: '',
+      showPassword: false
+    }
+  },
+  methods: {
+    handleSubmit() {
+      // Lógica para enviar os dados do formulário para o backend
+      console.log('Email:', this.email)
+      console.log('Senha:', this.password)
+    }
+  }
+}
+</script> -->
+
 <!-- <template>
 
   <header>
